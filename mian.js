@@ -8,7 +8,6 @@ const cors = require("cors");
 const {google} =require('googleapis');
 var app=express();
 
-
 app.use(cors());
 app.use(express.urlencoded({extended:false}));
 app.use(express.json());
@@ -97,6 +96,9 @@ sendMail()
 app.post('/send-comment',(req,res)=>{
     console.log(req.body);
 
+    res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'GET');
+
     const {email,message,tipo}=req.body;
     
     const Client_id="1075497400848-a6drq67p82i98sub0g9q189fmotniiva.apps.googleusercontent.com";
@@ -164,6 +166,9 @@ app.get("/ayuda", (req, res) => {
 
     // const db = firebase.firestore();
     const db = getFirestore();
+
+    res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'GET');
 
     db.collection('1170').get()
         .then((snapshot) => {
