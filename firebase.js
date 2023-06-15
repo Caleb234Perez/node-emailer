@@ -26,7 +26,8 @@ router.get("/ayuda", (req, res) => {
 
     // const db = firebase.firestore();
     const db = getFirestore();
-
+ res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'GET');
     db.collection('1170').get()
         .then((snapshot) => {
 
