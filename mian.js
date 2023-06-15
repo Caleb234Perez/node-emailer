@@ -70,10 +70,11 @@ app.post('/send-email',(req,res)=>{
                     auth:{
                         type:"OAuth2",
                         user:"frankunsc@gmail.com",
-                        clientId:Client_id,
+                       pass:'bdwficvxwskgmzyp',
+                        /*clientId:Client_id,
                         clientSecret:Client_secret,
                         refreshToken:resfresh_token,
-                        accessToken:accessToken,
+                        accessToken:accessToken,*/
 
                     },
                      
