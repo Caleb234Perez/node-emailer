@@ -4,7 +4,7 @@ const cors = require("cors");
 var app=express();
 app.use(cors());
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 10000;
 
 const { initializeApp, applicationDefault, cert } = require('firebase-admin/app');
 const { getFirestore, Timestamp, FieldValue } = require('firebase-admin/firestore');
