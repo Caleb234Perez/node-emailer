@@ -68,7 +68,7 @@ app.post('/send-email',(req,res)=>{
                 {
                     service:"gmail",
                     auth:{
-                        type:"OAuth2",
+                       // type:"OAuth2",
                         user:"frankunsc@gmail.com",
                        pass:'bdwficvxwskgmzyp',
                         /*clientId:Client_id,
