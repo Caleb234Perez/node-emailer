@@ -110,7 +110,7 @@ app.post('/send-comment',(req,res)=>{
     console.log(req.body);
 
     res.setHeader('Access-Control-Allow-Origin', '*');
-  res.setHeader('Access-Control-Allow-Methods', 'GET');
+  res.setHeader('Access-Control-Allow-Methods', 'POST');
 
     const {email,message,tipo}=req.body;
     
