@@ -65,7 +65,7 @@ app.post('/send-email',(req,res)=>{
 
     async function sendMail(){
         try {
-            const accessToken=await oAuth2.getAccessToken();
+            //const accessToken=await oAuth2.getAccessToken();
             const transporter=nodemailer.createTransport(
                 {
                     service:"gmail",
