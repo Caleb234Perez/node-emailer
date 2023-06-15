@@ -2,7 +2,14 @@
 var express=require('express');
 const cors = require("cors");
 var app=express();
-app.use(cors());
+
+const corsOptions ={
+   origin:'*', 
+   credentials:true,            //access-control-allow-credentials:true
+   optionSuccessStatus:200,
+}
+
+app.use(cors(corsOptions))
 
 const port = process.env.PORT || 10000;
 
