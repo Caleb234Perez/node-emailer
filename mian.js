@@ -1,5 +1,6 @@
 
 var express=require('express');
+const cors = require("cors");
 var app=express();
 app.use(cors());
 
@@ -8,7 +9,7 @@ const { getFirestore, Timestamp, FieldValue } = require('firebase-admin/firestor
 
 
 var nodemailer=require('nodemailer');
-const cors = require("cors");
+
 
 const {google} =require('googleapis');
 
