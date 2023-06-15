@@ -4,6 +4,8 @@ const cors = require("cors");
 var app=express();
 app.use(cors());
 
+const port = process.env.PORT || 3000;
+
 const { initializeApp, applicationDefault, cert } = require('firebase-admin/app');
 const { getFirestore, Timestamp, FieldValue } = require('firebase-admin/firestore');
 
@@ -161,7 +163,7 @@ sendMessage()
 
 });
 
-app.listen(3000,()=>{
+app.listen(port,()=>{
     console.log('firus');
 });
 
