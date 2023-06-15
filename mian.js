@@ -48,6 +48,8 @@ app.get('/',(req,res)=>{
 
 app.post('/send-email',(req,res)=>{
     console.log(req.body);
+   res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'POST');
 
     const {email}=req.body;
     
