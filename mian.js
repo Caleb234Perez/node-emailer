@@ -2,13 +2,14 @@ const { initializeApp, applicationDefault, cert } = require('firebase-admin/app'
 const { getFirestore, Timestamp, FieldValue } = require('firebase-admin/firestore');
 
 var express=require('express');
+var app=express();
 var nodemailer=require('nodemailer');
 const cors = require("cors");
 
 
 const {google} =require('googleapis');
 app.use(cors());
-var app=express();
+
 
 
 app.use(express.urlencoded({extended:false}));
