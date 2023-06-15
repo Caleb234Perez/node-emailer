@@ -4,11 +4,12 @@ const { getFirestore, Timestamp, FieldValue } = require('firebase-admin/firestor
 var express=require('express');
 var nodemailer=require('nodemailer');
 const cors = require("cors");
+app.use(cors());
 
 const {google} =require('googleapis');
 var app=express();
 
-app.use(cors());
+
 app.use(express.urlencoded({extended:false}));
 app.use(express.json());
 
